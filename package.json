@@ -2,9 +2,25 @@
   "name": "deepakraman.github.io",
   "version": "1.0.0",
   "description": "Deepak portfolio",
-  "main": "index.js",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.23.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.5.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild src/index.tsx --bundle --outfile=public/bundle.js --minify --sourcemap --define:process.env.NODE_ENV='\"production\"' && tailwindcss -i ./src/index.css -o ./public/app.css --minify",
+    "start": "esbuild src/index.tsx --bundle --outfile=public/bundle.js --sourcemap --define:process.env.NODE_ENV='\"development\"' --watch",
+    "watch-css": "tailwindcss -i ./src/index.css -o ./public/app.css --watch"
   },
   "author": "Deepak Raman",
   "license": "ISC"
