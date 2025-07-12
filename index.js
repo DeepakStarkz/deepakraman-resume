@@ -7,7 +7,7 @@ const port = 3001;
 const server = http.createServer((req, res) => {
   const filePath = path.join(
     __dirname,
-    'public',
+    'build',
     req.url === '/' ? 'index.html' : req.url,
   );
 

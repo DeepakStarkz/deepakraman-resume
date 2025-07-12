@@ -1,7 +1,7 @@
 {
-  "name": "deepakraman.github.io",
+  "name": "deepakraman-resume",
   "version": "1.0.0",
-  "homepage": "https://deepakstarkz.github.io/deepakraman.github.io/",
+  "homepage": "https://deepakstarkz.github.io/deepakraman-resume/",
   "description": "Deepak portfolio",
   "dependencies": {
     "react": "^18.3.1",
@@ -20,7 +20,7 @@
     "typescript": "^5.5.2"
   },
   "scripts": {
-    "build": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --minify --sourcemap --define:process.env.NODE_ENV='\"production\"' && tailwindcss -i ./src/index.css -o ./build/app.css --minify && cp index.html build/index.html",
+    "build": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --minify --sourcemap --define:process.env.NODE_ENV='\"production\"' && tailwindcss -i ./src/index.css -o ./build/app.css --minify && cp -a public/. build/",
     "start": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --sourcemap --define:process.env.NODE_ENV='\"development\"' --watch",
     "watch-css": "tailwindcss -i ./src/index.css -o ./build/app.css --watch",
     "predeploy": "npm run build",
