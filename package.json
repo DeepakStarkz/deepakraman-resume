@@ -1,6 +1,7 @@
 {
   "name": "deepakraman.github.io",
   "version": "1.0.0",
+  "homepage": "https://deepakstarkz.github.io/deepakraman.github.io/",
   "description": "Deepak portfolio",
   "dependencies": {
     "react": "^18.3.1",
@@ -13,14 +14,17 @@
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.23.0",
     "esbuild-plugin-copy": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.5.2"
   },
   "scripts": {
-    "build": "esbuild src/index.tsx --bundle --outfile=public/bundle.js --minify --sourcemap --define:process.env.NODE_ENV='\"production\"' && tailwindcss -i ./src/index.css -o ./public/app.css --minify",
-    "start": "esbuild src/index.tsx --bundle --outfile=public/bundle.js --sourcemap --define:process.env.NODE_ENV='\"development\"' --watch",
-    "watch-css": "tailwindcss -i ./src/index.css -o ./public/app.css --watch"
+    "build": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --minify --sourcemap --define:process.env.NODE_ENV='\"production\"' && tailwindcss -i ./src/index.css -o ./build/app.css --minify && cp index.html build/index.html",
+    "start": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --sourcemap --define:process.env.NODE_ENV='\"development\"' --watch",
+    "watch-css": "tailwindcss -i ./src/index.css -o ./build/app.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Deepak Raman",
   "license": "ISC"
