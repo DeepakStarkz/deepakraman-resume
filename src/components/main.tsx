@@ -50,10 +50,14 @@ const Summary: React.FC = () => {
     <section className="mt-6">
       <SubHeading title="Summary"></SubHeading>
       <p className="text-gray-700">
-        Enthusiastic and driven Frontend Developer with a track record of
-        enhancing user experience and improving payment systems. Skilled at
-        debugging, collaboration, and delivering efficient solutions. Passionate
-        about frontend innovation and exploring AI-driven user interfaces.
+        Senior Frontend Developer with 5+ years of experience building scalable,
+        high‑performance web applications using React and Next.js (App Router &
+        Pages Router). Strong expertise in headless architecture, content‑driven
+        platforms, and high‑traffic e‑commerce checkouts serving 1M+ users.
+        Proven at improving Core Web Vitals, SEO, and conversion, integrating
+        GraphQL/REST APIs, and collaborating across design, backend, and product
+        teams in Agile environments. Eligible for UK Skilled Worker visa
+        sponsorship.
       </p>
     </section>
   );
